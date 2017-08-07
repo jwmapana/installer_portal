@@ -1,0 +1,15 @@
+.menu-item button{
+  color: $dark_blue;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.menu-item button:hover{
+  text-decoration: none;
+  color: $light_blue;
+}
+
+.menu-item-selected{
+  color: $orange !important;
+}

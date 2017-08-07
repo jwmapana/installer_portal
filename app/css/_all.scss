@@ -1,0 +1,357 @@
+/*@import 'buttons';*/
+/*@import 'calendar';*/
+/*@import 'forms';*/
+/*@import 'icons';*/
+/*@import 'labels';*/
+/*@import 'modals';*/
+/*@import 'navbar';*/
+/*@import 'page';*/
+/*@import 'tables';*/
+/*@import 'tabs';*/
+/*@import 'typography';*/
+
+////////////////////////////////////
+//margin classes
+.l5 {margin-left: 5px;}
+.l10 {margin-left: 10px;}
+.l15 {margin-left: 15px;}
+.l20 {margin-left: 20px;}
+.l25 {margin-left: 25px;}
+.l30 {margin-left: 30px;}
+.t3 {margin-top: 3px;}
+.t5 {margin-top: 5px;}
+.t10 {margin-top: 10px;}
+.t15 {margin-top: 15px;}
+.t20 {margin-top: 20px;}
+.t25 {margin-top: 25px;}
+.t30 {margin-top: 30px;}
+.b5 {margin-bottom: 5px;}
+.b10 {margin-bottom: 10px;}
+.b15 {margin-bottom: 15px;}
+.b20 {margin-bottom: 20px;}
+.b25 {margin-bottom: 25px;}
+.b30 {margin-bottom: 30px;}
+.r5 {margin-right: 5px;}
+.r10 {margin-right: 10px;}
+.r15 {margin-right: 15px;}
+.r20 {margin-right: 20px;}
+.r25 {margin-right: 25px;}
+.r30 {margin-right: 30px;}
+
+/////////////////////////////////////
+// text classes
+.text-bold{font-weight: bold;}
+.text-center{text-align: center;}
+.text-left{text-align: left !important;}
+.text-blue{color: $dark_blue;}
+.text-blue-light{color: $light_blue;}
+.text-gray{color: $blue_gray;}
+.text-material-gray{ color: #727374;}
+
+.font-sm{
+  font-size: small;
+}
+.font-xxsm{
+  font-size: xx-small;
+}
+
+////////////////////////////////////
+// container classes
+.bg-gray{background-color: $bg_gray;}
+.main-omniverse{
+  height: 100%;
+  // overflow: hidden;
+}
+.main-header{
+  height: 15%;
+  // z-index: 500;
+  position: relative;
+}
+.main-bg{
+  // background-image: url("img/bg_image.png"), linear-gradient(#fff, #DFEBF8, #A9CBED, #69A2E1, #344B81);
+  background-image: linear-gradient(#fff, #DFEBF8, #A9CBED, #69A2E1, #344B81);
+  background-size: 100%;
+  // background-repeat: no-repeat;
+  min-height: 85%;
+  overflow: initial;
+}
+.containerx{
+  background: rgba(255,255,255,0.95);
+  padding: 10px 40px 10px 40px !important;
+}
+
+.container-chart{
+  background-color: #FFF;
+  height: 400px;
+  width: 75%;
+  padding: 30px;
+}
+
+.site-table-body{
+  height: 85%;
+}
+
+.container-border-right{
+  border-right: solid 2px $light_blue_hilite;
+}
+
+#alerts{
+  position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+    height: 30%;
+    // background-color: rgba(255, 0, 0, .25);
+    z-index: 200;
+}
+
+////////////////////////////////////
+// highcharts classes
+.weather-overlay{
+  position: absolute;
+  top: 75px;
+  left: 60px;
+  z-index: 10;
+}
+
+.weather-item{
+  display: inline-block;
+}
+
+////////////////////////////////////
+// button classes
+.btn-fa{
+  font-size: 18px !important;
+  color: $blue_primary;
+  cursor: pointer;
+}
+.btn-fa-small{
+  font-size: larger;
+  cursor: pointer;
+}
+
+.btn-attention{
+  box-shadow: 0 0 30px red;
+}
+
+.has-feedback .fa {
+  font-size: large;
+  margin-right: 15px;
+  margin-top: 7px;
+}
+
+.li-btn{
+  cursor: pointer !important;
+  color: $dark_blue;
+}
+
+li .panel-title{
+  color: $dark_blue;
+}
+.li-btn:hover{
+  background-color: #EEE;
+}
+div:focus,button:focus,.li-btn:focus{
+  outline: none !important;
+}
+.li-btn-selected{
+  background-color: $light_blue_hilite !important;
+}
+
+.no-focus-hilite:active,
+.no-focus-hilite:focus,
+.no-focus-hilite:hover{
+  outline: none !important;
+}
+
+.selected_row{
+  background-color: $light_blue_hilite !important;
+}
+
+.delete_row{
+  background-color: #F2DEDE;
+}
+
+.delete_row td {
+  color: #AA4542 !important;
+}
+
+.delete_row .btn-fa
+{
+  color: #AA4542 !important;
+}
+//////////////////////////////////////
+// div table classes
+.table-head{
+  font-size: 14px;
+  font-weight: bold;
+  color: $light_blue;
+  border-bottom: solid 1px $light_blue;
+}
+
+.table-body{
+  overflow-y: scroll;
+}
+
+.table-row{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #FFF;
+}
+
+.table-row-node{
+  border-bottom: dashed 1px #CCC;
+}
+
+.table-row-odd{
+  background-color: #EEE;
+}
+
+.table-row-even{
+  border: 1px solid #EEE;
+  background-color: #FFF;
+}
+
+.node-separator{
+  border-bottom: dashed 1px #BBB;
+}
+
+/////////////////////////////////////////
+// dialogs and windows
+
+.dialog{
+  border-radius: 4px;
+  border: solid 12px $light_blue_hilite;
+  background-color: rgba(0,0,0,0);
+}
+
+.dialog-header{
+  height: 30px;
+  width: 100%;
+  background-color: $light_blue_hilite;
+}
+
+.dialog-small{
+  min-height: 200px;
+  min-width: 400px;
+}
+
+.dialog-medium{
+  min-height: 400px;
+  min-width: 600px;
+}
+
+.dialog-large{
+  min-height: 500px;
+  min-width: 900px;
+}
+
+.data-box{
+  border-radius: 4px;
+  border: solid 12px $light_blue_hilite;
+  background-color: rgba(0,0,0,0);
+  padding: 0 !important;
+}
+
+.db-title-bar{
+  height: 30px;
+  width: 100%;
+  background-color: $light_blue_hilite;
+  padding: 0 15px 4px 15px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.db-title-bar-standalone{
+  height: 30px;
+  width: 100%;
+  background-color: $light_blue_hilite;
+  padding: 5px 15px 4px 15px;
+  font-weight: bold;
+}
+
+.db-title-bar .fa{
+  font-size: 20px;
+}
+
+.db-content{
+  background-color: '#FFF';
+  padding: 15px;
+}
+
+/////////////////////////////////////////
+// bootstrap overrides
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.alert{
+  border-radius: 16px 0 16px 0 !important;
+  border-width: 2 !important;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+li .panel-heading{
+  padding: 0;
+}
+li .panel-title{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.panel-body{
+  border-top: 0 !important;
+}
+
+.list-group-item{
+  border: 1px solid $light_blue_hilite !important;
+}
+
+.nav-tabs.nav-justified > .active > a{
+  border: $light_blue_hilite;
+}
+
+.table > thead > tr > th{
+  color: $light_blue;
+  border-color: $light_blue_hilite !important;
+  font-size: .85em;
+}
+
+.table > tbody > tr > td{
+  color: $dark_blue;
+  border-color: $light_blue_hilite !important;
+  // font-size: .75em;
+}
+
+
+
+////////////////////////////////////
+// angular-material overrides
+
+.md-dialog{
+  border-radius: 8px !important;
+  background-color: rgba(0,0,0,0.75) !important;
+  border: solid 8px $light_blue_hilite !important;
+}
+
+md-dialog.fullscreen-dialog {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator{
+  background-color: $dark_blue;
+}
+
+.md-datepicker-open .md-datepicker-calendar-icon{
+  color: $dark_blue;
+}

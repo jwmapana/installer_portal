@@ -1,0 +1,32 @@
+/////////////////////////////////////
+// media specific styles
+
+// @media only screen and (orientation: landscape)
+// {
+//   .site-table-body{
+//     height: 60%;
+//   }
+// }
+//
+// @media (min-width: $screen-sm-min)
+// {
+//   .containerx{
+//     padding: 0;
+//   }
+// }
+
+img.mbl-logo{
+  width: 80%;
+  height: auto;
+}
+
+.containerx_mbl{
+  background: rgba(255,255,255,0.75);
+  padding: 0 !important;
+}
+
+.dialog-mbl{
+  // min-height: 400px;
+  // min-width: 350px;
+  // margin-top: 150px;
+}

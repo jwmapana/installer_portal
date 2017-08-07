@@ -14,5 +14,26 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.6.2",
+    "angular-bootstrap": "~2.5.0",
+    "angular-cookies": "~1.6.2",
+    "angular-route": "~1.6.2",
+    "angular-animate": "~1.6.2",
+    "angular-material": "~1.1.3",
+    "angular-sanitize": "~1.6.2",
+    "basket.js": "~0.5.2",
+    "bootstrap-sass": "~3.3.7",
+    "font-awesome": "~4.7.0",
+    "jquery": "~2.1.4",
+    "lodash": "~4.17.4",
+    "moment": "~2.10.6",
+    "angular-translate": "~2.15.1",
+    "angular-translate-loader-static-files" : "~2.15.1",
+    "angular-cookie": "~4.1.0",
+    "highcharts": "~5.0.9",
+    "ngstorage": "~0.3.11",
+    "ng-password-meter": "latest"
+  }
 }

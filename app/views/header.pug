@@ -1,0 +1,11 @@
+div
+  .row
+    .col-xs-5
+      a(href="/")
+        img.t10(src="img/apana_logo_small.png", style="width: 100%; ")
+    .col-xs-7.text-right
+      h4.t20 Installation Helper
+  #alerts(ng-show="header.messages.length")
+    .alert.col-xs-10.col-xs-offset-1.t20(ng-repeat="msg in header.messages", ng-class="'alert-' + msg.type") 
+      .fa.btn-fa.fa-times.pull-right(style="font-size: 1em; margin-top: -15px; margin-right: -10px", ng-click="header.messages.splice($index, 1)", ng-class="'text-' + msg.type")
+      | {{msg.msg}}

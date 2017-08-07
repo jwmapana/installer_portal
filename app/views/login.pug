@@ -1,0 +1,15 @@
+include header.pug
+// Created by jmcneely on 2/23/17.
+
+.col-xs-8.col.col-xs-offset-2(style="margin-top: 30%;")
+	.col-xs-12
+		h4.text-center Login to the APANA™ Installer Helper
+	.col-xs-12.t20
+		form(name="login_form")
+			.form-group
+				label.control-label(for="username") Username
+				input.form-control(type="text", ng-model="username", placeholder='Enter Username...')
+			.form-group
+				label.control-label(for="password") Password
+				input.form-control(type="password", ng-model="password", placeholder='Enter Password...')
+			button.btn.btn-primary.btn-block.t20(ng-click="login_upw()") Login

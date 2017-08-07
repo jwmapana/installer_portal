@@ -1,0 +1,17 @@
+# Custom
+# directories to ignore
+build/**
+bower_components/**
+nbproject/
+node_modules/
+tmp/
+.idea/
+
+# file types to ignore
+.DS_Store
+*.html
+*.log
+*.sql
+
+# files to ignore
+app/factories/environment_factory.js
