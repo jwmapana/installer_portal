@@ -70,7 +70,8 @@ gulp.task('html', function(){
 });
 
 gulp.task('index', function(){
-    return gulp.src('build/views/index.html')
+    return gulp.src('app/views/index.pug')
+        .pipe(pug())
         .pipe(gulp.dest('build'))
 });
 
