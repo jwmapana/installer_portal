@@ -9,3 +9,10 @@ div
     .alert.col-xs-10.col-xs-offset-1.t20(ng-repeat="msg in header.messages", ng-class="'alert-' + msg.type") 
       .fa.btn-fa.fa-times.pull-right(style="font-size: 1em; margin-top: -15px; margin-right: -10px", ng-click="header.messages.splice($index, 1)", ng-class="'text-' + msg.type")
       | {{msg.msg}}
+  #notices(ng-show="header.notices.length")
+    .alert.col-xs-10.col-xs-offset-1.t20(ng-repeat="ntc in header.notices", ng-class="'alert-' + ntc.type") 
+      .fa.btn-fa.fa-times.pull-right(style="font-size: 1em; margin-top: -15px; margin-right: -10px", ng-click="header.notices.splice($index, 1)", ng-class="'text-' + ntc.type")
+      | {{ntc.msg}}
+      br
+      | {{ntc.msg_b}}
+      

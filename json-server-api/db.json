@@ -1,0 +1,188 @@
+{
+  "sites": [
+    {
+      "site_id": 1,
+      "site_name": "Blabular",
+      "site_address": "123 Main St.",
+      "site_city": "Las Vegas",
+      "site_state": "NV",
+      "site_postalcode": "88901"
+    },
+    {
+      "site_id": 2,
+      "site_name": "Blebular",
+      "site_address": "124 Elm St.",
+      "site_city": "Las Vegas",
+      "site_state": "NV",
+      "site_postalcode": "88901"
+    },
+    {
+      "site_id": 3,
+      "site_name": "Blibular",
+      "site_address": "123 Hickory St.",
+      "site_city": "Las Vegas",
+      "site_state": "NV",
+      "site_postalcode": "88901"
+    }
+  ],
+  "site_status": [
+    {
+      "site_id": 1,
+      "gateways": [
+        {
+          "id": 1,
+          "site_id": 1,
+          "gateway_macid": "ab-11-cd",
+          "gateway_rssi": 55,
+          "gateway_rssi_status": 1,
+          "date_connection": 0,
+          "data_provider_id": 3,
+          "data_provider": {
+            "id": 3,
+            "data_provider_name": "ATT"
+          }
+        },
+        {
+          "id": 2,
+          "site_id": 1,
+          "gateway_macid": "ab-11-ce",
+          "gateway_rssi": 66,
+          "gateway_rssi_status": 1,
+          "date_connection": 0,
+          "data_provider_id": 3,
+          "data_provider": {
+            "id": 3,
+            "data_provider_name": "ATT"
+          }
+        }
+      ],
+      "pucks": [
+        {
+          "id": 1,
+          "site_id": 1,
+          "puck_name": "Puck 1a",
+          "puck_macid": "bb-11-cd",
+          "puck_sn": "1234",
+          "puck_rssi": 44,
+          "puck_rssi_status": 2,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        },
+        {
+          "id": 2,
+          "site_id": 1,
+          "puck_name": "Puck 1b",
+          "puck_macid": "bb-11-ce",
+          "puck_sn": "1235",
+          "puck_rssi": 45,
+          "puck_rssi_status": 2,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        }
+      ]
+    },
+    {
+      "site_id": 2,
+      "gateways": [
+        {
+          "id": 3,
+          "site_id": 2,
+          "gateway_macid": "cb-11-cd",
+          "gateway_rssi": 77,
+          "gateway_rssi_status": 1,
+          "date_connection": 0,
+          "data_provider_id": 3,
+          "data_provider": {
+            "id": 3,
+            "data_provider_name": "ATT"
+          }
+        },
+        {
+          "id": 4,
+          "site_id": 2,
+          "gateway_macid": "cb-11-ce",
+          "gateway_rssi": 78,
+          "gateway_rssi_status": 1,
+          "date_connection": 0,
+          "data_provider_id": 3,
+          "data_provider": {
+            "id": 3,
+            "data_provider_name": "ATT"
+          }
+        }
+      ],
+      "pucks": [
+        {
+          "id": 3,
+          "site_id": 2,
+          "puck_name": "Puck 2a",
+          "puck_macid": "cb-11-cd",
+          "puck_sn": "1236",
+          "puck_rssi": 55,
+          "puck_rssi_status": 2,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        },
+        {
+          "id": 4,
+          "site_id": 1,
+          "puck_name": "Puck 2b",
+          "puck_macid": "cb-11-ce",
+          "puck_sn": "1237",
+          "puck_rssi": 88,
+          "puck_rssi_status": 1,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        }
+      ]
+    },
+    {
+      "site_id": 3,
+      "gateways": [
+        {
+          "id": 5,
+          "site_id": 3,
+          "gateway_macid": "db-11-cd",
+          "gateway_rssi": 33,
+          "gateway_rssi_status": 1,
+          "date_connection": 0,
+          "data_provider_id": 3,
+          "data_provider": {
+            "id": 3,
+            "data_provider_name": "ATT"
+          }
+        }
+      ],
+      "pucks": [
+        {
+          "id": 5,
+          "site_id": 3,
+          "puck_name": "Puck 3a",
+          "puck_macid": "eb-11-cd",
+          "puck_sn": "1238",
+          "puck_rssi": 55,
+          "puck_rssi_status": 3,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        },
+        {
+          "id": 6,
+          "site_id": 3,
+          "puck_name": "Puck 3b",
+          "puck_macid": "eb-11-ce",
+          "puck_sn": "1239",
+          "puck_rssi": 89,
+          "puck_rssi_status": 1,
+          "gateway_connection": 0,
+          "meter_connection": 0,
+          "meter_flow": 0
+        }
+      ]
+    }
+  ]
+}

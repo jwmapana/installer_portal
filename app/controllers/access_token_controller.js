@@ -18,6 +18,6 @@ apanaApp.controller('accessToken', function ($location,$rootScope,globalFactory)
 
   globalFactory.accesstoken = $rootScope.accesstoken;
 
-  $location.path("/login"); //TODO instead use a 'logging you in' page
+  $location.path("/connections"); //TODO instead use a 'logging you in' page
 
 });

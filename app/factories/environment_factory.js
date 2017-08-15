@@ -6,12 +6,10 @@ apanaApp.factory('environmentFactory', function(){
 
   ///////////////////////
   /////// Mock Dev backend
-  // ef.api_base_url = 'http://admin-vagrant.apana.us:3000/';
-  ef.api_base_url = 'https://admin-api-dev3.apana.us/v1/';
+  // ef.api_base_url = 'http://installer-vagrant.apana.us:3000/';
 
   /////// AWS dev backend
-  // ef.api_base_url = 'https://site-api-dev3.apana.us/v1/';
-  // ef.api_base_url_auth = 'https://site-api-dev3.apana.us/';
+  ef.api_base_url = 'https://admin-api-dev3.apana.us/v1/';
   ef.api_base_url_auth = 'https://admin-api-dev3.apana.us/';
 
   // ef.old_admin_base_url = 'https://wd.apana.us/admin/';

@@ -40,7 +40,7 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
 
       $http({
         method  : "POST",
-        url     : globalFactory.api_base_url + 'oauth2/token',
+        url     : globalFactory.api_base_url_auth + 'oauth2/token',
         data    : auth_params,
         headers : globalFactory.api_headers
       }).then(
@@ -70,7 +70,7 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
 
           $http({
             method  : "POST",
-            url     : globalFactory.api_base_url + 'oauth2/token',
+            url     : globalFactory.api_base_url_auth + 'oauth2/token',
             data    : auth_params,
             headers : globalFactory.api_headers
           }).then(
@@ -97,16 +97,16 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
           ipCookie('page_load_cookies', 'nope'); // forces the siteFactory cookies to reevaluate from scratch
           ipCookie('token', resp_obj.access_token);
           ipCookie('token_expire', globalFactory.expires.toString());
-          console.log('handle_api_auth_results ipCookie(route_params_site_id): ', ipCookie('route_params_site_id'));
-          globalFactory.establish_menu(); // filters excluded header menu items
-          if(ipCookie('route_params_site_id'))
-          {
-            $location.path("/usage");
-          }
-          else
-          {
-            $location.path("/site_list");
-          }
+          // console.log('handle_api_auth_results ipCookie(route_params_site_id): ', ipCookie('route_params_site_id'));
+          // if(ipCookie('route_params_site_id'))
+          // {
+          //   $location.path("/usage");
+          // }
+          // else
+          // {
+          //   $location.path("/site_list");
+          // }
+          $location.path("/connections");
         }
         else{
           $scope.messages = [{

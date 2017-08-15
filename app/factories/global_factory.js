@@ -26,6 +26,7 @@ apanaApp.factory('globalFactory', function($location, $http, $rootScope, ipCooki
   /////// AWS backend
   gf.api_base_url = environmentFactory.api_base_url;
   gf.api_base_url_version = environmentFactory.api_base_url_version;
+  gf.api_base_url_auth = environmentFactory.api_base_url_auth;
 
   gf.api_headers = {
     "Content-Type": 'application/json',
@@ -52,13 +53,6 @@ apanaApp.factory('globalFactory', function($location, $http, $rootScope, ipCooki
       if(moment(ipCookie('token_expire')).isAfter(moment())){ //this really is a browser refresh event
         gf.jwt_bearer_token = ipCookie('token');
         gf.expires = ipCookie('token_expire');
-        gf.base_org_id = ipCookie('base_org_id');
-        gf.banner_logo = ipCookie('banner_logo');
-        gf.customer_detail_pref = ipCookie('customer_detail_pref');
-        gf.show_nodes_pref = ipCookie('show_nodes_pref');
-        gf.first_day_of_week = ipCookie('first_day_of_week');
-        gf.menu_exclude = ipCookie('menu_exclude');
-        gf.establish_menu();
         return true;
       }
       else{ //no current token, cookie token has expired - user must login
