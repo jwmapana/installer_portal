@@ -8,6 +8,7 @@ apanaApp.controller('connectionsController', function($scope, $interval, $timeou
   var get_sites, page_load, clear_messages, refresh_connections;
 
   $scope.cn = {};
+  $scope.cn.site_select = {gateways: [], pucks: []};
   $scope.header = {messages: []};
 
   //////////////////////////////////////////////////////////////////////
@@ -87,6 +88,8 @@ apanaApp.controller('connectionsController', function($scope, $interval, $timeou
       })
       .catch(function(error){
         console.error('error getting gateways: ', error);
+        $scope.cn.site_select.gateways = [];
+        $scope.cn.site_select.pucks = [];
         $scope.header.messages = [{
           type: 'danger',
           msg: 'Server error: can\'t get gateway list'
