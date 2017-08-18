@@ -48,7 +48,7 @@ include header.pug
               .fa.btn-fa.fa-thumbs-up(style="color: green")
             span(ng-show="pk.puck_rssi_status == 2")
               .fa.btn-fa.fa-thumbs-down(style="color: orange")
-            span(ng-show="pk.puck_rssi_status <= 3")
+            span(ng-show="pk.puck_rssi_status == 3 || pk.puck_rssi_status < 0")
               .fa.btn-fa.fa-thumbs-down(style="color: red")
           td
             span(ng-show="pk.meter_connection")

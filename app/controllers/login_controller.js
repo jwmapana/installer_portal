@@ -9,6 +9,7 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
     $scope.page_title = 'Login'
     $scope.languages = globalFactory.languages;
     $scope.show_password_email_message = false;
+    $scope.header = {messages: []};
 
     /////////////////////////////////////////
     // get oauth access token
@@ -109,8 +110,12 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
           $location.path("/connections");
         }
         else{
-          $scope.messages = [{
-            msg: $filter('translate')("LOGIN_ALERT_NO_LOGIN"),
+          console.log('login error: ', resp_obj);
+
+          var login_error = resp_obj.status == 401 ? 'Could not log in: No username/pw match.' : 'Could not log in due to server error';
+
+          $scope.header.messages = [{
+            msg: login_error,
             type: 'danger'
           }];
         }
@@ -146,7 +151,7 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
               $scope.show_password_email_failure = false;
             },
             function(error){
-              console.log('http error', error);
+              console.error('http error', error);
               $scope.show_password_email_message = false;
               $scope.show_password_email_failure = true;
 
