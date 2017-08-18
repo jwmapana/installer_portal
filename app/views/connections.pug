@@ -44,6 +44,8 @@ include header.pug
         tr(ng-repeat="pk in cn.site_select.pucks")
           td {{pk.puck_name}}
           td
+            span.font-sm
+              | {{pk.puck_rssi}}|{{pk.puck_snr}} 
             span(ng-show="pk.puck_rssi_status == 1")
               .fa.btn-fa.fa-thumbs-up(style="color: green")
             span(ng-show="pk.puck_rssi_status == 2")
