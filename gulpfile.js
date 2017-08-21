@@ -23,6 +23,7 @@ var js_files = [
     './bower_components/angular-sanitize/angular-sanitize.js',
     './bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
     './bower_components/moment/min/moment.min.js',
+    './bower_components/moment-duration-format/lib/moment-duration-format.js',
     './bower_components/angular-cookie/angular-cookie.js',
     './app/apanaApp.js',
     './app/router.js',

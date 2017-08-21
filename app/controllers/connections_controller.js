@@ -53,21 +53,23 @@ apanaApp.controller('connectionsController', function($scope, $interval, $timeou
     clear_messages();
 
 
-    connectionsFactory.get_site_status($scope.cn.site_id)
-    .then(function(response){
-      $scope.cn.site_select = response.data;
-      // console.log('$scope.cn.site_select', $scope.cn.site_select);
-      if($scope.cn.site_select.gateways.length >0){
-        $scope.choose_gateway($scope.cn.site_select.gateways[0], 0);
-      }
-    })
-    .catch(function(error){
-      console.error('error getting gateways: ', error);
-      $scope.header.messages.push({
-        type: 'danger',
-        msg: 'Server error: can\'t get gateway list'
-      });
-    });
+    // connectionsFactory.get_site_status($scope.cn.site_id)
+    // .then(function(response){
+    //   $scope.cn.site_select = response.data;
+    //   // console.log('$scope.cn.site_select', $scope.cn.site_select);
+    //   if($scope.cn.site_select.gateways.length >0){
+    //     $scope.choose_gateway($scope.cn.site_select.gateways[0], 0);
+    //   }
+    // })
+    // .catch(function(error){
+    //   console.error('error getting gateways: ', error);
+    //   $scope.header.messages.push({
+    //     type: 'danger',
+    //     msg: 'Server error: can\'t get gateway list'
+    //   });
+    // });
+
+    refresh_connections();
   };
 
   $scope.choose_gateway = function(gateway, index){
@@ -84,6 +86,11 @@ apanaApp.controller('connectionsController', function($scope, $interval, $timeou
         // console.log('$scope.cn.site_select', $scope.cn.site_select);
         if($scope.cn.site_select.gateways.length >0){
           $scope.choose_gateway($scope.cn.site_select.gateways[$scope.cn.gateway_select_index], $scope.cn.gateway_select_index);
+        }
+        if($scope.cn.site_select.pucks.length > 0){
+          $scope.cn.site_select.pucks.forEach(function(pk,idx){
+            pk.fresh = moment.duration(pk.stale_seconds, 'seconds').format('m:ss');
+          })
         }
       })
       .catch(function(error){
