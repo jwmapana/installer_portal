@@ -44,7 +44,7 @@ include header.pug
       tbody
         tr(ng-repeat="pk in cn.site_select.pucks")
           td {{pk.puck_name}}
-          td.text-right
+          td.text-right.no-wrap
             span.font-sm
               | {{pk.puck_rssi}}|{{pk.puck_snr}} 
             span(ng-show="pk.puck_rssi_status == 1")
@@ -53,7 +53,7 @@ include header.pug
               .fa.btn-fa.fa-thumbs-down(style="color: orange")
             span(ng-show="pk.puck_rssi_status == 3 || pk.puck_rssi_status < 0")
               .fa.btn-fa.fa-thumbs-down(style="color: red")
-          td.text-right
+          td.text-right.no-wrap
             span(ng-show="pk.meter_connection")
               .fa.btn-fa.fa-thumbs-up(style="color: green")
             span(ng-hide="pk.meter_connection")

@@ -55,6 +55,10 @@
   font-size: xx-small;
 }
 
+.no-wrap{
+  white-space: nowrap;
+}
+
 ////////////////////////////////////
 // container classes
 .bg-gray{background-color: $bg_gray;}
