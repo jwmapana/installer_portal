@@ -89,7 +89,7 @@ apanaApp.controller('loginController', function($location, $scope, $rootScope, $
 
       handle_api_auth_results = function(type, resp_obj){ //type means, success or error
         if(type == 'success'){
-          console.log('resp_obj', resp_obj);
+          // console.log('resp_obj', resp_obj);
           globalFactory.jwt_bearer_token = resp_obj.access_token;
           globalFactory.user = {id: resp_obj.user_id, email: resp_obj.email};
           globalFactory.expires = moment().add(resp_obj.expires_in, 'seconds');

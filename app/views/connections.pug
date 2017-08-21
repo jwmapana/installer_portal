@@ -40,6 +40,7 @@ include header.pug
           th Puck
           th Gateway
           th Meter
+          th.text-right Fresh
       tbody
         tr(ng-repeat="pk in cn.site_select.pucks")
           td {{pk.puck_name}}
@@ -57,6 +58,7 @@ include header.pug
               .fa.btn-fa.fa-thumbs-up(style="color: green")
             span(ng-hide="pk.meter_connection")
               .fa.btn-fa.fa-thumbs-down(style="color: red")
+          td.text-right {{pk.stale_seconds}}
   .col-xs-10.col-xs-offset-1(ng-hide="cn.gateway_select.gateway_rssi_status == 1")
     h3(style="color: red") No Cell Signal
     .row.t20(ng-show="cn.site_id")
