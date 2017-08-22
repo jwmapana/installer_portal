@@ -4,7 +4,7 @@ include header.pug
     select.form-control(
       ng-model="cn.site_id",
       ng-change="choose_site()",
-      ng-options="site.site_id as site.site_name for site in cn.sites"
+      ng-options="site.site_id as site.site_code + ' | ' + site.site_name for site in cn.sites"
       )
         option(value="") Choose a Site...
 .row.t5
