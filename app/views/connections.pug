@@ -45,20 +45,20 @@ include header.pug
         tr(ng-repeat="pk in cn.site_select.pucks")
           td {{pk.puck_name}}
           td.text-right.no-wrap
-            span.font-sm(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'black'}")
+            span.font-sm(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'black'}")
               | {{pk.puck_rssi}}|{{pk.puck_snr}} 
             span(ng-show="pk.puck_rssi_status == 1")
-              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'green'}")
+              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'green'}")
             span(ng-show="pk.puck_rssi_status == 2")
-              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'orange'}")
+              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'orange'}")
             span(ng-show="pk.puck_rssi_status == 3 || pk.puck_rssi_status < 0")
-              .fa.btn-fa.fa-thumbs-down(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'red'}")
+              .fa.btn-fa.fa-thumbs-down(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'red'}")
           td.text-right.no-wrap
             span(ng-show="pk.meter_connection")
-              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'green'}")
+              .fa.btn-fa.fa-thumbs-up(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'green'}")
             span(ng-hide="pk.meter_connection")
-              .fa.btn-fa.fa-thumbs-down(ng-style="{color: pk.stale_seconds > 61 ? 'gray' : 'red'}")
-          td.text-right(ng-style="{color: pk.stale_seconds > 61 ? 'red' : 'green'}") {{pk.fresh}}
+              .fa.btn-fa.fa-thumbs-down(ng-style="{color: pk.stale_seconds > 300 ? 'gray' : 'red'}")
+          td.text-right(ng-style="{color: pk.stale_seconds > 300 ? 'red' : (pk.stale_seconds > 61 ? 'orange' : 'green')}") {{pk.fresh}}
   .col-xs-10.col-xs-offset-1(ng-hide="cn.gateway_select.gateway_rssi_status == 1")
     h3(style="color: red") No Cell Signal
     .row.t20(ng-show="cn.site_id")
